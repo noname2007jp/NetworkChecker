@@ -15,7 +15,7 @@
     <InformationalVersion>1.0.0</InformationalVersion>
     <Product>NetworkChecker</Product>
     <Description>Communication trouble checker for end users</Description>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- ApplicationManifest>app.manifest</ApplicationManifest -->
     <NoWarn>$(NoWarn);CA1416</NoWarn>
   </PropertyGroup>
 
