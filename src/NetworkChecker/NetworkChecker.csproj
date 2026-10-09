@@ -16,8 +16,6 @@
     <Product>NetworkChecker</Product>
     <Description>Communication trouble checker for end users</Description>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationDefaultFont>Yu Gothic UI, 9pt</ApplicationDefaultFont>
-    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <NoWarn>$(NoWarn);CA1416</NoWarn>
   </PropertyGroup>
 
