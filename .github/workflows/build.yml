@@ -24,6 +24,9 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Show .NET environment info
+        run: dotnet --info
+
       - name: Restore
         run: dotnet restore NetworkChecker.sln
 
