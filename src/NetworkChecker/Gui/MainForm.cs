@@ -43,6 +43,9 @@ public sealed class MainForm : Form
         _config = config;
         _targets = targets;
 
+        // 子コントロールはフォームの Font を継承するため、最初に設定する
+        Font = AppFonts.Create();
+
         Text = $"{Strings.Get("AppTitle")}  v{VersionInfo.Version}";
         ClientSize = new Size(800, 660);
         MinimumSize = new Size(700, 560);
