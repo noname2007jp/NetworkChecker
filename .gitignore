@@ -1,0 +1,11 @@
+# File: .gitignore
+bin/
+obj/
+publish/
+.vs/
+*.user
+logs/
+result.json
+report.html
+config.json
+targets.json
