@@ -56,7 +56,6 @@ internal static class Program
         {
             if (attached) FreeConsole();
             ApplicationConfiguration.Initialize();
-            Application.DefaultFont = CreateAppFont();
             Application.Run(new MainForm(config, targets));
             return 0;
         }
@@ -88,30 +87,6 @@ internal static class Program
             Console.ReadLine();
         }
         return code;
-    }
-
-    /// <summary>
-    /// 表示言語に応じた既定フォントを作成する。
-    /// フォントがインストールされていない環境でも例外で落ちないよう、候補を順に試す。
-    /// </summary>
-    private static Font CreateAppFont()
-    {
-        var candidates = Strings.Current == "ja"
-            ? new[] { "Yu Gothic UI", "Meiryo UI", "Segoe UI" }
-            : new[] { "Segoe UI", "Yu Gothic UI", "Meiryo UI" };
-
-        foreach (var name in candidates)
-        {
-            try
-            {
-                return new Font(name, 9f);
-            }
-            catch (ArgumentException)
-            {
-                // フォント未インストール → 次の候補へ
-            }
-        }
-        return SystemFonts.DefaultFont;
     }
 
     private static void ShowFatal(string message)
