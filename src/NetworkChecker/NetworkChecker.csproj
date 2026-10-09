@@ -1,0 +1,29 @@
+<!-- File: src/NetworkChecker/NetworkChecker.csproj -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>NetworkChecker</RootNamespace>
+    <AssemblyName>NetworkChecker</AssemblyName>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Product>NetworkChecker</Product>
+    <Description>Communication trouble checker for end users</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationDefaultFont>Yu Gothic UI, 9pt</ApplicationDefaultFont>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="config.json" />
+    <EmbeddedResource Include="targets.json" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+// File: src/NetworkChecker/config.json
+{
+  "timeoutMs": 5000,
+  "retryCount": 2,
+  "retryIntervalMs": 500,
+  "enableIpv6": true,
+  "enableHttpTest": true,
+  "enableCertificateTest": true,
+  "saveLogs": true,
+  "generateHtmlReport": true,
+  "reportRefreshSeconds": 300,
+  "privacyMode": true,
+  "logRetentionDays": 30,
+  "language": null,
+  "testDomain": "www.example.com",
+  "referenceDnsServers": [ "8.8.8.8", "8.8.4.4", "1.1.1.1", "1.0.0.1" ],
+  "externalPingTargets": [ "1.1.1.1", "8.8.8.8" ],
+  "ntpServers": [ "time.cloudflare.com", "time.windows.com" ],
+  "httpsBaselineUrl": "https://example.com/"
+}

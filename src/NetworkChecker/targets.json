@@ -1,0 +1,10 @@
+// File: src/NetworkChecker/targets.json
+[
+  {
+    "name": "Example HTTPS",
+    "url": "https://example.com/",
+    "expectedStatus": [ 200, 301, 302 ],
+    "timeoutMs": 5000,
+    "enabled": true
+  }
+]
