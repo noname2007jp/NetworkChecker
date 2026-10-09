@@ -163,12 +163,14 @@ public static class HttpProbe
                     try
                     {
                         // 1引数オーバーロード + WaitAsync でタイムアウト／キャンセルを制御する
-                        var authTask = ssl.AuthenticateAsClient(new SslClientAuthenticationOptions
-                        {
-                            TargetHost = uri.Host,
-                            EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls13,
-                            CertificateRevocationCheckMode = X509RevocationMode.NoCheck,
-                        });
+                        var authTask = ssl.AuthenticateAsClientAsync(
+                            new SslClientAuthenticationOptions
+                            {
+                                TargetHost = uri.Host,
+                                EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls13,
+                                CertificateRevocationCheckMode = X509RevocationMode.NoCheck,
+                            });
+
                         await authTask.WaitAsync(token);
                     }
                     catch (OperationCanceledException)
