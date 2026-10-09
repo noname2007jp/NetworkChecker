@@ -33,6 +33,8 @@ public sealed class SettingsForm : Form
         _config = config;
         _targets = targets;
 
+        Font = AppFonts.Create();
+
         Text = Strings.Get("BtnSettings");
         ClientSize = new Size(620, 720);
         StartPosition = FormStartPosition.CenterParent;
